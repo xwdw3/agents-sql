@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>智能考勤问答 Agent</title>
+  <link rel="stylesheet" href="style.css?v=5" />
+</head>
+<body>
+  <!-- 登录视图 -->
+  <div id="loginView" class="login-wrap">
+    <div class="login-box">
+      <h1>智能考勤问答 Agent</h1>
+      <p class="sub">员工查询本人考勤 · 管理员全局查询</p>
+      <input id="username" type="text" placeholder="用户名" />
+      <input id="password" type="password" placeholder="密码" />
+      <button id="loginBtn" class="primary">登录</button>
+      <div class="quick">
+        <button data-u="zhangsan" data-p="123456">张三</button>
+        <button data-u="lisi" data-p="123456">李四</button>
+        <button data-u="wangwu" data-p="123456">王五</button>
+        <button data-u="admin" data-p="admin123">管理员</button>
+      </div>
+      <p id="loginError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- 聊天视图 -->
+  <div id="chatView" class="chat-wrap" hidden>
+    <header class="topbar">
+      <span id="identity" class="identity"></span>
+      <button id="logoutBtn" class="ghost">退出登录</button>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <button id="newChatBtn" class="primary full">新建对话</button>
+        <ul id="sessionList" class="sessions"></ul>
+      </aside>
+      <main class="main">
+        <div id="messages" class="messages"></div>
+        <div id="steps" class="steps"></div>
+        <div class="input-row">
+          <input id="input" type="text" placeholder="例如：我这个月迟到了几次？" />
+          <button id="sendBtn" class="primary">发送</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="main.js?v=7"></script>
+</body>
+</html>
